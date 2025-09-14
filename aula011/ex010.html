@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medidor de Velocidade</title>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    Velocidade do Carro<input type="number" name="txtvel" id="txtvel"> km/h
+    <input type="button" value="Verificar" id="clicou">
+    <div id="res">Resultado do teste</div>
+
+    <script>
+        let botao = window.document.getElementById('clicou')
+        botao.addEventListener('click',clicou)
+        
+        let txtvel = window.document.getElementById('txtvel')
+        let restxt = window.document.getElementById('res')
+        function clicou() {
+             let vel = Number(txtvel.value)
+             if (vel >= 80) {
+                restxt.innerHTML = 'Você foi MULTADO! A velocidade máxima permitida é de 79 km/h'
+        } else {
+            restxt.innerHTML = 'Você PASSOU!'
+            
+        }
+        restxt.innerHTML += ' <br>Dirija sempre com segurança'
+        }
+    
+        
+
+    </script>
+    
+</body>
+</html>
