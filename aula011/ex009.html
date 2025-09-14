@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passaporte</title>
+    <style>
+        body {
+            font-size: 1.3em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de identificação</h1>
+     Digite sua nacionalidade: <input type="text" name="txt" id="txt">
+     <input type="button" value="Confirmar" id="confirmacao">
+     <div id="resultado">Resultado: </div>
+
+     <script>
+        let botao = window.document.getElementById('confirmacao')
+        let res = window.document.getElementById('resultado')
+        botao.addEventListener('click',execucao)
+
+        function execucao() {
+             let entrada = window.document.getElementById('txt').value
+            if (entrada == 'brasileiro') {
+                res.innerHTML = 'BRASILEIRO'
+            } else {
+                res.innerHTML = 'ESTRANGEIRO'
+            }
+        }
+
+     </script>
+</body>
+</html>
