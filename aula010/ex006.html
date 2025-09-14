@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        #area {
+            background-color: #24c024;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            font-weight: 1.5em;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="area">Interaja</div> 
+
+    <script>
+        let a = window.document.getElementById('area')
+        a.addEventListener('click',clicar)
+        a.addEventListener('mouseenter',entrar)
+        a.addEventListener('mouseout',sair)
+        function clicar() {
+            a.innerText = 'OLÁ PEQUENO GAFANHOTO!'
+            a.style.backgroundColor = 'purple'
+        }
+
+        function entrar() {
+            a.innerText = 'BEM VINDO AO SEU CURSO EM VIDEO DE PYTHON'
+            a.style.color = 'red'
+        }
+
+        function sair() {
+            a.innerText = 'MEU NOME É GUSTAVO GUANABARA'
+            a.style.color = 'white'
+            a.style.backgroundColor = '#24c024'
+        }
+    </script>
+    
+</body>
+</html>
