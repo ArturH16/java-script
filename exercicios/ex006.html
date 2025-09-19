@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números com JS</title>
+     <style>
+         #bot1 {
+            padding: 30px;
+            font-size: 1.3em;
+        }
+
+        p {
+            font-size: 1.3em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com números!</h1>
+    <input type="button" value="Iniciar a soma!" id="bot1">
+    <p id="resultado">O resultado vem aqui..</p>
+
+    <script>
+        
+         let botao = window.document.getElementById('bot1')
+        botao.addEventListener('click',clicado)
+        let resultado = window.document.getElementById('resultado')
+
+        function clicado() {
+            let numero1 = Number(prompt('Digite um número: '))
+             let numero2 = Number(prompt('Digite um número: '))
+            resultado.innerHTML = `O resultado da soma entre <mark>${numero1}</mark> e <mark>${numero2}</mark> resulta em<strong> ${numero1 + numero2}</strong> `
+        } 
+    </script>
+    
+</body>
+</html>

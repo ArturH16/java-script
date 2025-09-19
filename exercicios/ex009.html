@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Cliques</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h1>Contador de cliques</h1>
+    <button id="bot1">Clique em mim</button>
+    <button id="bot2">Zerar o contador</button>
+    <p id="res">O contador está com <mark>0</mark> cliques</p>
+    <script>
+        let botao1 = document.getElementById('bot1')
+        let botao2 = document.getElementById('bot2')
+        let res = window.document.getElementById('res')
+        botao1.addEventListener('click',somar)
+        botao2.addEventListener('click',zerar)
+        let cliques = 0
+
+        function somar() {
+            cliques += 1
+            res.innerHTML = `O contador está com <mark>${cliques}</mark> cliques`
+        }
+
+        function zerar() {
+            cliques = 0 
+            res.innerHTML = ''
+        }
+        
+
+    </script>
+    
+</body>
+</html>

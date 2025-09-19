@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Love D';
+    src: url(jully\ julia.otf);
+}
+
+h1 {
+    font-family: 'Love D';
+}
+
+button {
+    padding: 42px;
+    font-size: 1.3em
+}
+
+p {
+    font-size: 1.1em
+}

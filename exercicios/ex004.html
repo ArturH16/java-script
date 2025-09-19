@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados com JS</title>
+    <style>
+         #bot1 {
+            padding: 30px;
+            font-size: 1.3em;
+        }
+
+        p {
+            font-size: 1.3em;
+        }
+    </style>
+</head>
+<body>
+    <h1>    Trabalhando com Dados v1.0</h1>
+    <input type="button" value="Clique aqui para começar!" id="bot1">
+    <p id="resultado">Aqui vai aparecer o resultado...</p>
+    
+    <script>
+        let botao = window.document.getElementById('bot1')
+        botao.addEventListener('click',clicado)
+        let resultado = window.document.getElementById('resultado')
+
+        function clicado() {
+            let nome = prompt('Qual o seu nome?')
+             resultado.innerHTML = `Olá <strong>${nome}</strong>! É um prazer te conhecer! &#x1F596`
+        }
+    </script>
+</body>
+</html>

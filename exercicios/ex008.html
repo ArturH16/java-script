@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números com JS</title>
+     <style>
+         #bot1 {
+            padding: 10px;
+            font-size: 1.3em;
+        }
+
+        p {
+            font-size: 1.3em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vários cálculos em JS</h1>
+    <input type="button" value="Clique aqui para calcular" id="bot1">
+    <p id="resultado">O resultado vem aqui..</p>
+
+    <script>
+    
+         let botao = window.document.getElementById('bot1')
+        botao.addEventListener('click',clicado)
+        let resultado = window.document.getElementById('resultado')
+
+        function clicado() {
+            let numero1 = Number(prompt('Digite um primeiro número:'))
+            resultado.innerHTML = `O número a ser analisado aqui será o <strong>${numero1}</strong> <hr> <br> O seu valor absoluto é ${Math.abs(numero1)} <br> A sua parte inteira é ${Number.parseInt(numero1)} <br> O valor inteiro mais próximo é ${Math.round(numero1)} <br> A sua raíz quadrada é ${Math.sqrt(numero1)} <br> A sua raíz cúbica é ${Math.cbrt(numero1)} <br> O valor de ${numero1}<sup>2</sup> é ${numero1 ** 2}<br> O valor de ${numero1} <sup>3</sup> é ${numero1 ** 3}`
+        } 
+    </script>
+    
+</body>
+</html>
