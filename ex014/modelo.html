@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo de Exercício</title>
+    <title>Hora do Dia</title>
     <style>
         body {
-            background-color: rgba(20, 20, 223, 0.658);
+            background-color: rgba(121, 121, 219, 0.829);
             font-size: 1.3em;
             text-align: center;
 
@@ -26,19 +26,20 @@
         }
 
         footer {
+            margin-top: 20px;
             color: white;
             font-style: italic;
         }
     </style>
 </head>
-<body>
+<body onload="carregar()">
        <header>
-            <h1>Título</h1>
+            <h1>Hora do Dia</h1>
         </header>
     <main>
         <section>
-            <div>Testando</div>
-            <div>Olá</div>
+            <div id="hora">Aqui vai aparecer a mensagem...</div>
+            <div id="imagem"><img id="foto" src="imagens/pexels-artur-roman-p.png" alt="Foto Manhã"></div>
         </section>
     </main>
 
