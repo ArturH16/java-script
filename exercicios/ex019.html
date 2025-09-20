@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Múltiplas ações</title>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Múltiplas ações</h1>
+    <button id="bot1">Clique para iniciar</button>
+    <p id="resultado">Clique no botão acima para começar.</p>
+
+    <script>
+        
+         let botao = window.document.getElementById('bot1')
+        botao.addEventListener('click',clicado)
+        let resultado = window.document.getElementById('resultado')
+
+        function clicado() {
+            let numero1 = Number(prompt('Digite um número: '))
+             let numero2 = Number(prompt('Digite outro número: '))
+            let opcoes = Number(prompt(`Valores informados: ${numero1} e ${numero2}\nO que vamos fazer?\n1Somar\n2Subtrair\n3Multiplicar\n4Dividir`))
+            switch(opcoes) {
+                case 1: 
+                resultado.innerHTML = `${numero1} + ${numero2} = <strong>${numero1 + numero2}</strong>`
+                break
+                case 2: 
+                resultado.innerHTML = `${numero1} - ${numero2} = <strong>${numero1 - numero2}</strong>`
+                break
+                case 3: 
+                resultado.innerHTML = `${numero1} X ${numero2} = <strong>${numero1 * numero2}</strong>`
+                break
+                case 4: 
+                resultado.innerHTML = `${numero1} / ${numero2} = <strong>${numero1 / numero2}</strong>`
+                break
+
+                default: 
+                resultado.innerHTML = `OPÇÃO INVÁLIDA! Você digitou ${numero1} e ${numero2}, mas não sei o que fazer com eles.`
+                break
+
+            }
+          
+        } 
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando a idade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Calculando a idade</h1>
+    <button id="bot1">Clique aqui para iniciar análise</button>
+    <p id="res">O resultado vai aparecer aqui...</p>
+
+    <script>
+        let botao = document.getElementById('bot1')
+        botao.addEventListener('click',clicado)
+        let resultado = document.getElementById('res')
+        function clicado() {
+            agora = new Date()
+            let nasc = Number(prompt('Em que ano você nasceu? '))
+            let idade = agora.getFullYear() - nasc
+            resultado.innerHTML = `Quem nasceu em ${nasc} vai completar <strong>${idade}</strong> em ${agora.getFullYear()}`
+            
+
+            
+           
+            
+            
+
+        }
+    </script>
+    
+</body>
+</html>

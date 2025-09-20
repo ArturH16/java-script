@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Estações no Brasil</title>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Descbra a estação do ano</h1>
+    <button id="bot1">Informe o mês aqui</button>
+    <p id="resultado">Clique no botão acima para começar.</p>
+
+    <script>
+        
+         let botao = window.document.getElementById('bot1')
+        botao.addEventListener('click',clicado)
+        let resultado = window.document.getElementById('resultado')
+
+        function clicado() {
+            let mes = prompt('Digite o mês em extenso e somente maiúsculas (ex: SETEMBRO)')
+            switch (mes.toUpperCase()) {
+                case 'DEZEMBRO': case 'JANEIRO': case 'FEVEREIRO':
+                resultado.innerHTML = `No mês de ${mes}, estamos na estação <mark><strong>VERÃO</strong></mark>`
+                break
+             case 'MARÇO': case 'ABRIL': case 'MAIO':
+                resultado.innerHTML = `No mês de ${mes}, estamos na estação <mark><strong>OUTONO</strong></mark>`
+                break
+
+                case 'JUNHO': case 'JULHO': case 'AGOSTO':
+                resultado.innerHTML = `No mês de ${mes}, estamos na estação <mark><strong>INVERNO</strong></mark>`
+                break
+            case 'SETEMBRO': case 'OUTUBRO': case 'NOVEMBRO':
+                resultado.innerHTML = `No mês de ${mes}, estamos na estação <mark><strong>PRIMAVERA</strong></mark>`
+                break
+            default:
+                resultado.innerHTML = `No mês de ${mes}, estamos na estação <mark><strong>INDEFINIDA</strong></mark>`
+            }
+
+             
+          
+        } 
+
+            
+             
+    </script>
+    
+</body>
+</html>

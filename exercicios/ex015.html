@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisando Data e Hora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Analisando data e hora do Sistema</h1>
+    <button id="bot1">Clique aqui para iniciar análise</button>
+    <p id="res">O resultado vai aparecer aqui...</p>
+
+    <script>
+        let botao = document.getElementById('bot1')
+        botao.addEventListener('click',clicado)
+        let resultado = document.getElementById('res')
+        function clicado() {
+            agora = new Date()
+            resultado.innerHTML = `Dia: ${agora.getDate()} <br>`
+            resultado.innerHTML += `Mês: ${agora.getMonth() + 1} <br>`
+            resultado.innerHTML += `Ano: ${agora.getFullYear()} <br>`
+            resultado.innerHTML += `Dia da semana: ${agora.getDay()} <br>`
+             resultado.innerHTML += `Horas: ${agora.getHours()} <br>`
+              resultado.innerHTML += `Minutos: ${agora.getMinutes()} <br>`
+               resultado.innerHTML += `Segundos: ${agora.getSeconds()} <br>`
+
+            
+           
+            
+            
+
+        }
+    </script>
+    
+</body>
+</html>

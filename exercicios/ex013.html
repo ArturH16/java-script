@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior valor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Maior valor</h1>
+    <button id="bot1">Clique aqui para iniciar</button>
+    <p id="res">O resultado vai aparecer aqui...</p>
+
+    <script>
+        let botao = document.getElementById('bot1')
+        botao.addEventListener('click',clicado)
+        let resultado = document.getElementById('res')
+        function clicado() {
+             let n1 = Number(prompt('Digite um número: '))
+             let n2 = Number(prompt('Digite outro número: '))
+             if (n1 > n2) {
+                resultado.innerHTML = `Analisando os valores <mark>${n1}</mark> e <mark>${n2}</mark>, o maior valor é <strong>${n1}</strong>`
+             } else if (n2 > n1) {
+                resultado.innerHTML = `Analisando os valores <mark>${n1}</mark> e <mark>${n2}</mark>, o maior valor é <strong>${n2}</strong>`
+             } else {
+                resultado.innerHTML = `Analisando os valores <mark>${n1}</mark> e <mark>${n2}</mark> ambos são <strong>IGUAIS</strong>`
+             }
+
+            
+           
+            
+            
+
+        }
+    </script>
+    
+</body>
+</html>

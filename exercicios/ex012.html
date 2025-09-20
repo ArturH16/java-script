@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O número é par ou ímpar?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>É par ou impar?</h1>
+    <button id="bot1">Clique aqui para iniciar</button>
+    <p id="res">O resultado vai aparecer aqui...</p>
+
+    <script>
+        let botao = document.getElementById('bot1')
+        botao.addEventListener('click',clicado)
+        let resultado = document.getElementById('res')
+        function clicado() {
+             let n1 = Number(prompt('Digite um número: '))
+             if (n1 % 2 == 0) {
+                resultado.innerHTML = `O número ${n1} que foi digitado é <strong>PAR!</strong>`
+             } else {
+                resultado.innerHTML = `O número ${n1} que foi digitado é <strong>ÍMPAR!</strong>`
+             }
+           
+            
+            
+
+        }
+    </script>
+    
+</body>
+</html>
