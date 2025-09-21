@@ -7,7 +7,7 @@ let txtano = document.getElementById('ano')
 let ano = Number(txtano.value)
 let ano_atual = new Date().getFullYear()
 
-if(ano > ano_atual || txtano.value.length == 0) {
+if(ano > ano_atual || txtano.value.length == 0 || ano < 1800) {
     resultado.innerHTML = 'Esse ano não é aceito pelo sistema!'
 }  else {
     let sexo = document.getElementsByName('sex')
