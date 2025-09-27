@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo de Exercício</title>
+    <title>Tabuada</title>
     <style>
         body {
             background-color: rgba(20, 20, 223, 0.658);
@@ -24,6 +24,13 @@
             margin: auto;
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.363);
         }
+        section > div,p {
+            text-align: left;
+        }
+        select {
+            display: block;
+            text-align: left;
+        }
 
         footer {
             color: white;
@@ -33,12 +40,15 @@
 </head>
 <body>
        <header>
-            <h1>Título</h1>
+            <h1>Tabuada</h1>
         </header>
     <main>
         <section>
-            <div>Testando</div>
-            <div>Olá</div>
+            <div>Número: <input type="number" name="" id="numero"> <button id="tabuada_botao">Gerar Tabuada</button></div>
+            <p id="res"> Resultado: </p>
+            <select name="" id="tabuada_sel" size="10">
+                <option value="">Digite um número acima: </option>
+            </select>
         </section>
     </main>
 
